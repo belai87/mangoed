@@ -1,0 +1,24 @@
+.input{
+
+  &-group{}
+
+  &-control{
+    background: #FFFFFF;
+    border: 1px solid #E1E3E8;
+    border-radius: 10px;
+    height:45px;
+    font-size: 14px;
+    color: #3A3F5C;
+
+    &::placeholder{
+      font-size: 14px;
+      color: #9396A6;
+    }
+
+    &:focus{
+      color: #3A3F5C;
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.breadcrumbs{
+  &-item{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color:#3a3f5cd9;
+
+  }
+  &-link{
+    color: #3A3F5C;
+
+    &:after{
+      position: absolute;
+      content: '•';
+      font-size:14px;
+      top:0;
+      right: -1rem;
+      color: #3A3F5C;
+    }
+
+    &:hover{
+      color:$primary-color;
+    }
+  }
+}

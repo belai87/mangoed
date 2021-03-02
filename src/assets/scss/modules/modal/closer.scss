@@ -1,0 +1,26 @@
+.closer{
+  right:1rem;
+  top:1rem;
+  cursor: pointer;
+
+  & svg{
+    width:24px;
+    height:24px;
+
+    @media screen and (max-width:$md-width){
+      width:18px;
+      height:18px;
+    }
+
+    & path{
+      fill:$gray-color;
+    }
+  }
+
+  &-detail{
+    & svg{
+      width:18px;
+      height:18px;
+    }
+  }
+}

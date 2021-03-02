@@ -1,0 +1,56 @@
+.action{
+    margin:2rem 0;
+
+    &-title{
+        font-weight: 600;
+        font-size: 26px;
+        color:$dark-color;
+        font-family: "Museo Cyrl", sans-serif;
+
+        @media screen and (max-width:$lg-width){
+            font-size: 20px;
+        }
+    }
+
+    &-slider{
+        min-height:400px;
+    }
+
+    &__top{
+        margin-top:-50px;
+
+    }
+
+    &-link{
+        color:$primary-color;
+        font-size: 15px;
+        font-weight: 600;
+        position: relative;
+        padding:0 18px 0 0;
+
+        @media screen and (max-width:$lg-width){
+            font-size: 14px;
+        }
+
+        &:before{
+            position: absolute;
+            content:'';
+            width:12px;
+            height:12px;
+            background-image: url('../img/svg/all_products.svg');
+            background-size: contain;
+            top:6px;
+            right:0;
+
+            @media screen and (max-width:$lg-width){
+                top:4px;
+            }
+        }
+    }
+
+    & .owl-stage{
+        @media screen and (max-width:$md-width){
+            padding-left:0!important;
+        }
+    }
+}

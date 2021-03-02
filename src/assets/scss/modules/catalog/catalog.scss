@@ -1,0 +1,96 @@
+.catalog{
+  margin:0 -.5rem;
+
+  & .catalog-item{
+    width:20%;
+
+    @media screen and (max-width:1500px){
+      width:25%;
+    }
+    @media screen and (max-width:$xl-width){
+      width:33.33%;
+    }
+    @media screen and (max-width:$lg-width){
+      width:50%;
+    }
+    @media screen and (max-width:$md-width){
+      width:100%;
+    }
+  }
+
+  &-h1{
+    font-family: $secondFont;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 36px;
+    color: #3A3F5C;
+    margin:0 0 3rem;
+
+    & span{
+      color:#9396A6;
+    }
+  }
+
+  &-search{
+
+    & input{
+      background: #FFFFFF;
+      border: 1px solid #E1E3E8;
+      border-radius: 10px;
+      height:46px;
+      width:100%;
+      font-weight: normal;
+      font-size: 15px;
+      color: #9396A6;
+    }
+
+    & button{
+      width:30px;
+      height:30px;
+      right:10px;
+      top:7.5px;
+      background: transparent;
+
+      & svg{
+        width:30px;
+        height:30px;
+
+        & circle{
+          fill:#fff;
+        }
+      }
+    }
+  }
+
+  &-banner{
+    box-shadow: 0 7px 20px rgba(58, 63, 92, 0.1);
+    border-radius: 10px;
+    background: #fff;
+    width:39.5%;
+    margin:3rem 0;
+
+    @media screen and (max-width:1500px){
+      width:50%;
+    }
+    @media screen and (max-width:$xl-width){
+      width:66.66%;
+    }
+    @media screen and (max-width:$md-width){
+      width:100%;
+    }
+
+    &_name{
+      font-family: $secondFont;
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 36px;
+      color: #39B54A;
+    }
+    &_description{
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: #9C9D9D;
+    }
+  }
+}

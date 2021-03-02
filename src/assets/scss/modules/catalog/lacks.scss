@@ -1,0 +1,45 @@
+.lacks{
+  background: #EDF0F3;
+  border-radius:10px;
+  overflow: hidden;
+  transition:$transition;
+
+  &:hover{
+    background: darker(#EDF0F3, 10);
+  }
+
+  &-img{
+    width:120px;
+    height:120px;
+
+    & svg{
+      width:100%;
+    }
+  }
+
+  &-text{
+    font-family: $secondFont;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #9396A6;
+  }
+
+  &-btn{
+    border: 2px solid #9396A6;
+    border-radius: 60px;
+    font-size: 16px;
+    color: #9396A6;
+    transition:$transition;
+    cursor: pointer;
+
+    &:hover,
+    &:focus{
+      color: #fff;
+      background: #9396A6;
+      animation: lacks 1s;
+    }
+  }
+
+}

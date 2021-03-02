@@ -1,0 +1,402 @@
+.product{
+  border-radius:10px;
+  overflow: hidden;
+
+  &:hover{
+    box-shadow:0 0 10px 1px rgba(0,0,0,.1);
+  }
+
+  &-catalog{
+    width: calc(20% - 1rem);
+    
+    @media screen and (max-width:1450px) {
+      width: calc(25% - 1rem);
+    }
+    @media screen and (max-width:$xl-width) {
+      width: calc(33.3% - 1rem);
+    }
+    @media screen and (max-width:$lg-width) {
+      width: calc(50% - 1rem);
+    }
+    @media screen and (max-width:$md-width) {
+      width: 100%;
+    }
+  }
+  
+  &-end &{
+    &-img{
+      background: #EDF0F3;
+    }
+  }
+
+  &-img{
+    border-radius:10px 10px 0 0;
+    overflow:hidden;
+    max-height:230px;
+    height:100%;
+  }
+
+  &-action{
+    top:1rem;
+    left:1rem;
+
+    &_item{
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      color: #F4F5F7;
+
+      &__sale{
+        background: #FB4B83;
+      }
+
+      &__week{
+        background: #39B54A;
+      }
+
+      &__hit{
+        background: $primary-color;
+      }
+    }
+  }
+
+  &-content{
+    background: $default-color;
+    border-radius:0 0 10px 10px;
+  }
+
+  &-name{
+    font-family: $secondFont;
+    font-size:17px;
+    line-height: 19px;
+    font-weight:500;
+    color:#3A3F5C;
+  }
+
+  &-place{
+    height:40px;
+    overflow: hidden;
+  }
+
+  &-country{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #9C9D9D;
+  }
+
+  &-price{
+    font-family: $secondFont;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FE6600;
+    transition:$transition;
+
+    &_old{
+      font-weight: normal;
+      font-size: 14px;
+      color: #9396A6;
+      text-decoration: line-through;
+    }
+
+    &-control{
+      font-size:0;
+    }
+  }
+
+  &-add{
+    background: $primary-color;
+    border-radius:100%;
+    width:45px;
+    height:45px;
+    cursor:pointer;
+    transition:$transition;
+
+    &:hover{
+      background: $danger-colors;
+      animation: pulse 1s infinite;
+    }
+
+    & svg{
+      width:24px;
+      height:24px;
+    }
+  }
+
+  &-control{
+    background: #F4F5F7;
+    border-radius: 50px;
+    height:0;
+    opacity: 0;
+    visibility: hidden;
+
+    & input{
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: #3A3F5C;
+      width:45px;
+      height:35px;
+      text-align: right;
+      background: transparent;
+    }
+
+    &_unit{
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: #3A3F5C;
+    }
+
+    &_value{
+      font-size: 14px;
+      line-height: 17px;
+      color: #9C9D9D;
+    }
+
+    &_minus,
+    &_plus{
+      width:30px;
+      height:30px;
+      cursor: pointer;
+      transition:$transition;
+
+      &:hover,
+      &:focus{
+        background: #e4e5e8;
+        border-radius: 100%;
+        animation: pulse-white 1.5s;
+        & svg{
+          & path{
+            fill:darker(#9093A2, 50);
+          }
+        }
+      }
+
+      & svg{
+        width:16px;
+        height:16px;
+
+        & path{
+          fill:#9093A2;
+          transition:$transition;
+        }
+      }
+    }
+  }
+
+  &.active &{
+    &-control{
+      height:45px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-box{
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &-price-control{
+      font-size:18px;
+      flex: 1;
+    }
+
+    &-country{
+      flex: 2;
+    }
+  }
+}
+
+/*
+.product{
+  cursor: pointer;
+  position: relative;
+
+  &-wrapper{
+    background-color: $default-color;
+    border-radius:10px 10px 5px 5px;
+    !*overflow: hidden;*!
+    color:$dark-color;
+    transition:$transition;
+
+    &:hover,
+    &:focus{
+      box-shadow:0 0 10px 1px rgba(0,0,0,.1);
+    }
+  }
+
+  &:hover &,
+  &:focus &{
+    &-name{
+      color:$primary-color;
+    }
+  }
+
+  &.active &{
+    &-add{
+      opacity: 0;
+      height:0;
+      visibility: hidden;
+    }
+
+    &-price-control{
+      opacity: 1;
+      height:100px;
+      visibility: visible;
+    }
+  }
+
+  &-info{
+    height:100px;
+  }
+
+  &-sale{
+    top:1rem;
+    left:1rem;
+    background-color: $danger-colors;
+    color:$default-color;
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 2px;
+  }
+
+  &-description{
+    height:70px;
+    overflow: hidden;
+  }
+
+  &-img{
+    & img{
+      border-radius:10px 10px 0 0;
+    }
+  }
+  &-name{
+    font-family: "Museo Cyrl", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+
+    @media screen and (max-width:$lg-width){
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &-land{
+    font-size: 15px;
+    line-height: 18px;
+    color:$gray-color;
+
+    @media screen and (max-width:$lg-width){
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  &-price{
+    font-family: "Museo Cyrl", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color:$primary-color;
+
+    @media screen and (max-width:$lg-width){
+      font-size: 15px;
+    }
+
+    &__old{
+      font-size: 14px;
+      color:$gray-color;
+
+      @media screen and (max-width:$lg-width){
+        font-size: 12px;
+      }
+
+      &:after{
+        position: absolute;
+        content:'';
+        width:100%;
+        height:1px;
+        background: $gray-color;
+        top:8px;
+        left:0;
+        transform:rotate(20deg);
+      }
+    }
+  }
+
+  &-buy{
+    background: $primary-color;
+    border-radius:100%;
+    width:45px;
+    height:45px;
+    cursor:pointer;
+    transition:$transition;
+
+    &:hover{
+      background: $danger-colors;
+      animation: pulse 1s infinite;
+    }
+
+    & svg{
+      width:24px;
+      height:24px;
+    }
+  }
+
+  &-price-control{
+    opacity: 0;
+    height:0;
+    visibility: hidden;
+  }
+
+  &-value{
+    font-size: 15px;
+    font-weight: normal;
+    color:$gray-color;
+  }
+
+  &-control{
+    height:45px;
+    background: $light-color;
+    border-radius: 50px;
+    transition:$transition;
+
+    &_cnt{
+      background: transparent;
+      font-weight: bold;
+      font-size: 14px;
+      max-width:50px;
+      width:100%;
+
+      &-value{
+        top: 0;
+        right: -50px;
+        font-size: 16px;
+        font-weight: 600;
+        color: $gray-color;
+      }
+    }
+
+    &_minus,
+    &_plus{
+      color:$dark-color;
+      font-size:22px;
+      font-weight: 900;
+      cursor: pointer;
+
+      & svg{
+        width:15px;
+        height:16px;
+        & path{
+          fill:#9093A2;
+        }
+      }
+    }
+  }
+
+}
+*/

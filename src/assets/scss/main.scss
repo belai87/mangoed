@@ -1,0 +1,134 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "reset";
+
+/*@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/grid";
+*/
+
+@import "~bootstrap/scss/bootstrap";
+html{
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $xl-width) {
+    font-size: 13px;
+  }
+  @media screen and (max-width: $lg-width) {
+    font-size: 12px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:$mainFont!important;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+h1{
+  @media screen and (max-width: $lg-width) {
+    font-size: 2rem;
+  }
+}
+
+a { text-decoration: none; }
+a:hover,
+a:focus{
+  text-decoration: none;
+}
+img{
+  width:100%;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+header{
+  z-index:2;
+}
+main{
+  flex: 1 0 auto;
+  background-color: $light-color;
+  z-index:1;
+}
+footer{
+  flex: 0 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+@import "grid";
+@import "media";
+@import "modules/keyframes";
+@import "modules/header/header";
+@import "modules/main/main";
+@import "modules/catalog/menu";
+@import "modules/catalog/social";
+
+@import "modules/slider/slider";
+@import "modules/slider/banner";
+@import "modules/slider/action";
+
+@import "modules/catalog/product";
+@import "modules/footer/footer";
+@import "modules/mobile-menu/menu";
+@import "modules/search/mobile";
+@import "modules/menu/personal";
+
+@import "modules/catalog/catalog";
+@import "modules/breadcrumbs/breadcrubs";
+@import "modules/catalog/sort";
+@import "modules/catalog/lacks";
+@import "modules/catalog/pagination";
+@import "modules/catalog/detail";
+@import "modules/catalog/control";
+@import "modules/catalog/tabs";
+@import "modules/catalog/chart";
+@import "modules/catalog/reviews";
+@import "modules/catalog/timer";
+@import "modules/catalog/detail-modal";
+
+@import "modules/basket/step";
+@import "modules/basket/basket";
+@import "modules/basket/form";
+@import "modules/basket/delivery";
+@import "modules/basket/payment";
+@import "modules/basket/success";
+@import "modules/basket/images";
+@import "modules/basket/datepicker";
+@import "modules/basket/info";
+
+@import "modules/input/index";
+@import "modules/select/index";
+@import "modules/radio/index";
+@import "modules/buttons/index";
+@import "modules/buttons/favorite";
+
+@import "modules/personal/personal";
+@import "modules/personal/menu";
+@import "modules/personal/favorite";
+@import "modules/personal/orders";
+@import "modules/personal/table";
+
+@import "modules/colors";
+@import "modules/modal/closer";
+@import "modules/modal/form";
+@import "~chartist/dist/scss/chartist";

@@ -1,0 +1,75 @@
+.banner{
+  font-family: "Museo Cyrl", sans-serif;
+  color:$dark-color;
+  overflow: hidden;
+  border-radius:5px;
+  height:48%;
+  background-color: $default-color;
+
+  &:hover{
+    color: $primary-color;
+  }
+
+  @media screen and (max-width:$xl-width){
+    height:auto;
+  }
+
+  &-text{
+    font-weight: 700;
+    font-size: 18px;
+
+    @media screen and (max-width:$xl-width){
+      font-size: 14px;
+    }
+  }
+
+  &-btn{
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: $default-color;
+    max-width:100px;
+    width:100%;
+  }
+
+  &-cache{
+    position:absolute;
+    bottom: 2rem;
+
+
+    @media screen and (max-width:$xl-width){
+      position:relative;
+      bottom:unset;
+      padding:2rem 0;
+      align-items: center;
+    }
+
+    &_procent{
+      font-family: Museo Cyrl, sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+
+      @media screen and (max-width:$xl-width){
+        font-size: 14px;
+      }
+    }
+
+    &_img{
+
+      @media screen and (max-width:$xl-width){
+        width:100px;
+      }
+
+      & svg{
+        fill:none;
+        width:65px;
+        height:65px;
+      }
+    }
+
+    &_sub{
+      font-size: 13px;
+      color:$gray-color;
+    }
+  }
+}

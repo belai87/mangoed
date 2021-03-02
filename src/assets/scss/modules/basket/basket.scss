@@ -1,0 +1,302 @@
+.basket{
+
+  &-list{
+    margin:3rem 0 0;
+  }
+
+  &-item{
+    border-bottom: 1px solid #E1E3E8;
+
+    &_img{
+      max-width:100px;
+      width:100%;
+      border-radius: 10px;
+      overflow:hidden;
+    }
+
+    &_name{
+      font-family: $secondFont;
+      font-weight: 500;
+      font-size: 15px;
+      color: #3A3F5C;
+      width: 200px;
+    }
+
+    &_country{
+      font-weight: normal;
+      font-size: 15px;
+      color: #9C9D9D;
+    }
+
+    &_price{
+      font-family: $secondFont;
+      font-weight: 500;
+      font-size: 18px;
+      color: #FE6600;
+    }
+
+    &_delete{
+      cursor: pointer;
+
+      @media screen and (max-width:$md-width) {
+        position: absolute;
+        right:0;
+        bottom: 1rem;
+      }
+
+      & svg{
+        width:10px;
+        height:10px;
+        transition:$transition;
+
+        @media screen and (max-width:$md-width) {
+          width:16px;
+          height:16px;
+        }
+
+        & path{
+          fill:#bbbbbb;
+        }
+
+        &:hover{
+          & path{
+            fill:$primary-color;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  & .product-control{
+    height:45px;
+    opacity: 1;
+    visibility: visible;
+    background: #edf0f3;
+  }
+
+  &-text{
+    font-weight: normal;
+    font-size: 16px;
+    color: #3A3F5C;
+  }
+
+  &-recover{
+    font-size: 16px;
+    font-weight: bold;
+    color:#39B54A;
+
+    & span{
+      border-bottom: 1px dashed #000000;
+    }
+  }
+
+  &-next{
+    margin: 3rem 0;
+
+    @media screen and (max-width:$md-width) {
+      display: none;
+    }
+  }
+
+  &-btn{
+    height: 45px;
+    background: #FF882F;
+    box-shadow: 0 2px 5px rgba(255, 136, 47, 0.5), 0 10px 35px rgba(255, 136, 47, 0.4);
+    border-radius: 60px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFEFE;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width:200px;
+    width:100%;
+
+    &:hover{
+      background: #39B54A;
+      box-shadow: 0 2px 5px rgba(57, 181, 74, 0.5), 0 10px 35px rgba(57, 181, 74, 0.4);
+    }
+  }
+
+  &-clear{
+    font-size: 14px;
+    color: #9396A6;
+    cursor: pointer;
+    transition:$transition;
+
+    &:hover{
+      color: $primary-color;
+
+      & svg{
+        & clipPath,
+        & path{
+          fill:$primary-color;
+        }
+      }
+    }
+
+    & svg{
+      transition:$transition;
+      width:16px;
+      height:16px;
+
+      & clipPath,
+      & path{
+        fill:#E1E3E8;
+      }
+    }
+  }
+
+  &-info{
+    border-radius:10px;
+    background: #fff;
+    box-shadow: 0 7px 20px rgba(58, 63, 92, 0.1);
+
+    &_item{
+
+
+      &:not(:last-child){
+        border-bottom: 1px solid #E1E3E8;
+      }
+
+    }
+
+    &_title{
+      font-family: $secondFont;
+      font-weight: 500;
+      font-size: 26px;
+      color: #3A3F5C;
+    }
+
+    &_prop{
+      font-size: 16px;
+      color: #9396A6;
+    }
+
+    &_value{
+      font-size: 16px;
+      color: #3A3F5C;
+
+      &__primary{
+        font-family: $secondFont;
+        font-weight: bold;
+        color:$primary-color;
+      }
+
+      &__alert{
+        color:#FE1A1A;
+      }
+    }
+
+    &_notification{
+      font-family: $secondFont;
+      background: rgba(254,126,26,.1);
+      font-size: 16px;
+      color: rgba(58, 63, 92, 0.6);
+      border-radius: 10px;
+
+      & span{
+        color:$primary-color
+      }
+    }
+
+    & label{
+      font-family: $secondFont;
+      font-weight: 500;
+      font-size: 15px;
+      color: #3A3F5C;
+    }
+
+    &_promo{
+      border: 1px solid #E1E3E8;
+      border-radius: 10px;
+      height:45px;
+
+      &-ico{
+        width:20px;
+        height:20px;
+        background:$primary-color;
+        border-radius:100%;
+
+        & svg{
+          width:10px;
+          height:10px;
+        }
+      }
+
+      &.active{
+        & button{
+          color: $primary-color;
+        }
+      }
+
+      & input{
+        font-size: 14px;
+        color: #3A3F5C;
+        background:transparent;
+        height:33px;
+        font-family: $mainFont;
+        width:100%;
+
+        &::placeholder{
+          font-size: 14px;
+          color: #9396A6;
+        }
+      }
+
+      & button{
+        border:0;
+        background:transparent;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #39B54A;
+      }
+    }
+
+    &_bonus{
+
+      label{
+        cursor: pointer;
+      }
+
+      input[type=checkbox]{
+        display: none;
+      }
+
+      input[type=checkbox]:checked + span{
+        background: #39B54A;
+      }
+
+      input[type=checkbox]+ span{
+        width:16px;
+        height:16px;
+        border-radius:100%;
+        background: #E8ECEF;
+      }
+    }
+
+    &_btn{
+      box-shadow: rgba(255, 136, 47, 0.5) 0 2px 5px, rgba(255, 136, 47, 0.4) 0px 10px 35px;
+      font-weight: bold;
+      font-size: 16px;
+      color: rgb(255, 254, 254);
+      cursor: pointer;
+      width: 100%;
+      background: rgb(255, 136, 47);
+      transition: all 0.3s ease 0s;
+      border-radius: 0 0 10px 10px;
+
+      &:hover{
+        background: #39B54A;
+        box-shadow: 0px 2px 5px rgba(57, 181, 74, 0.5), 0 10px 35px rgba(57, 181, 74, 0.4);
+      }
+
+      & svg{
+        width:24px;
+        height:24px;
+      }
+    }
+  }
+}

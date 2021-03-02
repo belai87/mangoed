@@ -1,0 +1,142 @@
+.footer{
+  background: $footer-color;
+  color: $default-color;
+  font-family: 'Museo Sans', sans-serif;
+  font-size:16px;
+  font-weight:600;
+  @media screen and (max-width:$lg-width){
+    margin:0 0 60px;
+  }
+
+  &-logo{
+    max-width:200px;
+    width:100%;
+  }
+
+  &-phone{
+    color: $default-color;
+    font-family: "Museo Cyrl",sans-serif;
+  }
+
+  &-days{
+    font-family: "Museo Cyrl",sans-serif;
+    &_item{
+      height:10px;
+      width:10px;
+      border-radius:100%;
+      background: $primary-color ;
+
+      &__weekend{
+        background:$weekend-color;
+      }
+    }
+  }
+
+  &-time{
+    font-size:15px;
+    font-weight: 400;
+    font-family: "Museo Cyrl",sans-serif;
+  }
+
+  &-social{
+    & a {
+      width:35px;
+      height:35px;
+      background-color: $weekend-color;
+      border-radius:100%;
+      transition:$transition;
+
+      &:hover{
+        background-color: $primary-color;
+        animation: pulse 1s infinite;
+      }
+
+      & svg{
+        width:24px;
+        height:24px;
+      }
+    }
+  }
+
+  &-work{
+    font-family: "Museo Cyrl",sans-serif;
+  }
+
+  &-write{
+    font-size:15px;
+    color:$primary-color;
+    cursor: pointer;
+  }
+
+  &-copyright{
+    font-size:15px;
+    font-weight: 400;
+  }
+
+  &-menu{
+    font-family: "Proxima Nova", sans-serif;
+    font-weight:400;
+    font-size:19px;
+
+
+    &_list{
+      @media screen and (max-width:$lg-width){
+        opacity: 0;
+        height:0;
+        visibility: hidden;
+        display: flex;
+        flex-flow:column;
+        align-items: center;
+      }
+      &.active{
+        opacity: 1;
+        height:auto;
+        visibility: visible;
+      }
+    }
+
+    &_item{
+      color:$default-color;
+      transition:$transition;
+
+      &:hover{
+        color:$primary-color
+      }
+
+      &__title{
+        font-family: "Museo Cyrl",sans-serif;
+        font-weight:900;
+        position: relative;
+
+        &.active{
+          color:$primary-color;
+
+          &:after{
+            transform:rotateX(180deg);
+            top:12px;
+            border-bottom: 6px solid $primary-color;
+          }
+        }
+
+        &:after{
+          position: absolute;
+          content: '';
+          top:5px;
+          right:-18px;
+          width:12px;
+          height:12px;
+          border: 6px solid transparent;
+          border-bottom: 6px solid #fff;
+          transition:$transition;
+          opacity: 0;
+
+          @media screen and (max-width: $lg-width){
+            opacity: 1;
+          }
+        }
+
+      }
+    }
+
+  }
+}

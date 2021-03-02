@@ -1,0 +1,59 @@
+.control{
+  background: #F4F5F7;
+  border-radius: 50px;
+  height:45px;
+
+  & input{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3A3F5C;
+    width:45px;
+    height:35px;
+    text-align: right;
+    background: transparent;
+  }
+
+  &-unit{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3A3F5C;
+  }
+
+  &-value{
+    font-size: 14px;
+    line-height: 17px;
+    color: #9C9D9D;
+  }
+
+  &-minus,
+  &-plus{
+    width:30px;
+    height:30px;
+    cursor: pointer;
+    transition:$transition;
+
+    &:hover,
+    &:focus{
+      background: #e4e5e8;
+      border-radius: 100%;
+      animation: pulse-white 1.5s;
+      & svg{
+        & path{
+          fill:darker(#9093A2, 50);
+        }
+      }
+    }
+
+    & svg{
+      width:16px;
+      height:16px;
+
+      & path{
+        fill:#9093A2;
+        transition:$transition;
+      }
+    }
+  }
+}

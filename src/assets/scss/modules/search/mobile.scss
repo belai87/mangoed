@@ -1,0 +1,35 @@
+.mobile-search{
+  width:100%;
+  top:-100%;
+  left:0;
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+  transition: $transition;
+  z-index: 100;
+
+  &.active{
+    top:70px;
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+  }
+
+  & input{
+    width:90%;
+    height:45px;
+    font-size:16px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    color:#fff;
+
+    &::placeholder {
+      color:#fff;
+    }
+  }
+
+  &__orange{
+    background-color: #FF7000;
+    padding: 0 0 2rem;
+  }
+}

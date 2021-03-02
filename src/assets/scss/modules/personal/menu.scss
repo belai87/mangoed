@@ -1,0 +1,60 @@
+.personal{
+
+  &-menu-list{
+    background: #FFFFFF;
+    box-shadow: 0 7px 20px rgba(58, 63, 92, 0.1);
+    border-radius: 0 0 10px 10px;
+    overflow:hidden;
+
+    @media screen and (max-width:$lg-width){
+      border-radius:10px;
+    }
+
+    &_item{
+      font-family: $secondFont;
+      font-weight: normal;
+      font-size: 18px;
+      color: #9396A6;
+      @media screen and (max-width:$lg-width){
+        width:50%;
+
+        &:nth-child(2n-1){
+          border-right: 1px solid #E1E3E8;
+        }
+      }
+
+      &-link{
+        border-bottom: 1px solid #E1E3E8;
+        transition:$transition;
+        border-left:3px solid transparent;
+        @media screen and (max-width:$lg-width){
+          border-left:none;
+          background: #e1e3e84d;
+          text-align: center;
+        }
+
+        &:hover{
+          border-left:3px solid $primary-color;
+          font-weight: normal;
+          font-size: 18px;
+          color:#3A3F5C;
+          @media screen and (max-width:$lg-width){
+            border-left:none;
+            background: #fff;
+          }
+        }
+
+        &.active{
+          color:#3A3F5C;
+          border-left:3px solid $primary-color;
+
+          @media screen and (max-width:$lg-width){
+            background: #fff;
+            border-left:none;
+            box-shadow: 0 7px 20px rgba(58, 63, 92, 0.1);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.radio{
+  cursor: pointer;
+  
+  &-input{
+    display: none;
+
+    &-after{
+      width:18px;
+      height:18px;
+      background: #E8ECEF;
+      border-radius:100%;
+      flex:0 0 auto;
+    }
+
+    &:checked + &{
+
+      &-after{
+        border: 4px solid #39B54A;
+      }
+    }
+  }
+
+  &-text{
+    font-size: 14px;
+    color: #3A3F5C;
+  }
+
+  &-address{
+    border: 1px solid #E1E3E8;
+    border-radius: 60px;
+    height:50px;
+
+    &.active{
+      border: 2px solid #39B54A;
+    }
+
+    &_deleted,
+    &_edit{
+      width:16px;
+      height:16px;
+
+      & svg{
+        width:100%;
+      }
+    }
+  }
+
+  &-control{}
+}

@@ -1,0 +1,20 @@
+.timer{
+  background: #DD3067;
+  border-radius: 4px;
+  overflow: hidden;
+
+
+  &-item{
+    font-weight: normal;
+  }
+
+  &-sale{
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  &-unit{
+    width:15px;
+  }
+
+}

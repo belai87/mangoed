@@ -1,0 +1,126 @@
+.slider{
+  overflow: hidden;
+  height:400px;
+  border-radius:5px;
+
+  @media screen and (max-width:$lg-width){
+    height:210px;
+  }
+
+  &-item{
+    overflow: hidden;
+    border-radius:5px;
+    height:400px;
+    background-position: center;
+    background-size: cover;
+    color:$default-color;
+
+    @media screen and (max-width:$lg-width){
+      height:210px;
+    }
+
+    &_content{
+      bottom: 2rem;
+      z-index:1010;
+      @media screen and (max-width:$lg-width){
+        bottom: unset;
+      }
+    }
+
+    &_over{
+      top:0;
+      left:0;
+      background-color:rgba(0,0,0,.5);
+      z-index:1000;
+    }
+
+    &_sale{
+      background-color: $primary-color;
+      width:135px;
+      font-weight: 400;
+      font-size: 13px;
+      border-radius: 2px;
+    }
+
+    &_title{
+      font-family: 'Museo Cyrl', sans-serif;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 36px;
+      margin:0 0 4rem;
+
+      @media screen and (max-width:$lg-width){
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    &_link{
+      border: 1px solid $default-color;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color:$default-color;
+      transition:$transition;
+      height:40px;
+      width: 200px;
+
+      &:hover{
+        color:$dark-color;
+        background-color: $default-color;
+      }
+    }
+  }
+
+  &-control{
+    color:$default-color;
+    bottom: 4rem;
+    right: 4rem;
+    z-index:2;
+    font-size:1.5rem;
+
+    &_prev,
+    &_next{
+      cursor: pointer;
+
+      & svg{
+        width:16px;
+        height:16px;
+        fill:none;
+      }
+    }
+
+    &_counter{
+      min-width:50px;
+    }
+  }
+
+  & .owl{
+
+    &-dots{
+      display: none;
+      position: relative;
+      top:-30px;
+      left:30px;
+      @media screen and (max-width:$lg-width){
+        display: block;
+      }
+    }
+
+    &-dot{
+      width:10px;
+      height:10px;
+      border-radius:100%;
+      background-color: $default-color!important;
+      margin:0 7px 0 0;
+
+      &.active{
+        background-color:$primary-color!important;
+      }
+    }
+  }
+
+}
+
+
+

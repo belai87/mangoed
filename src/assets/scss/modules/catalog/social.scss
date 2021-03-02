@@ -1,0 +1,29 @@
+.social{
+  border-top: 1px solid #F4F5F7;
+  color:$dark-color;
+  font-weight: bold;
+  font-size: 15px;
+  @media screen and (max-width:$xl-width){
+    display: none;
+  }
+
+  &-link{
+    background: $default-color;
+    width:32px;
+    height:32px;
+    border-radius:100%;
+
+    &:hover{
+      animation: pulse-white 1s infinite;
+    }
+  }
+
+    & svg{
+      width:24px;
+      height:24px;
+
+      & path{
+        fill:#ccc;
+      }
+    }
+}

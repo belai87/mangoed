@@ -1,0 +1,32 @@
+.mobile-menu{
+  bottom: 0;
+  left:0;
+  background: $default-color;
+  z-index:1080;
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,.1);
+
+  &_item{
+
+    & svg{
+      width:24px;
+      height:24px;
+      fill:none;
+
+      & circle,
+      & path{
+        fill:$gray-color;
+      }
+    }
+
+    &-cnt{
+      top:-9px;
+      right:18px;
+      width:18px;
+      height:18px;
+      background: $primary-color;
+      color:$default-color;
+      border-radius:100%;
+      font-size:12px;
+    }
+  }
+}

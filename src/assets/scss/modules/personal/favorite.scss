@@ -1,0 +1,55 @@
+.favorite{
+
+  &-control{
+    height:45px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-item{
+    overflow: hidden;
+    border-radius:10px;
+    background: #fff;
+
+    &_img{
+      max-width:230px;
+      min-width:100px;
+      width:100%;
+
+      @media screen and (max-width:$md-width) {
+        height: 70px;
+        border-radius:10px;
+        overflow: hidden;
+      }
+    }
+
+    &_name{
+      font-family: $secondFont;
+      font-weight: 500;
+      font-size: 17px;
+      color: #3A3F5C;
+
+      @media screen and (max-width:$md-width) {
+        font-size: 15px;
+      }
+    }
+
+    &_country{
+      font-size: 15px;
+      color: #9C9D9D;
+
+      @media screen and (max-width:$md-width) {
+        font-size: 15px;
+      }
+    }
+
+    &_price{
+      font-family: $secondFont;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      color: #FE6600;
+    }
+  }
+
+}

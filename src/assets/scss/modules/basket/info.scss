@@ -1,0 +1,68 @@
+.basket-info{
+
+  &_buy{
+    font-size: 14px;
+    color: #FE1A1A;
+
+    & a{
+      color: #39B54A;
+      font-weight: 500;
+
+      &:hover{
+        color: #39B54A;
+      }
+    }
+
+    &-ico{
+      svg{
+        width:16px;
+        height:16px;
+      }
+    }
+  }
+
+  &_status{
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    color: #3A3F5C;
+
+    span{
+      font-weight: 400;
+    }
+
+    &-check{
+      width:20px;
+      height:20px;
+      border-radius:100%;
+      background: #E1E3E8;
+      top:-10px;
+      left:calc(50% - 10px);
+
+      svg{
+        width:10px;
+        height:10px;
+      }
+
+      &__success{
+        background: #39B54A;
+      }
+    }
+
+    &-line{
+      height:3px;
+      background: #E1E3E8;
+      border-radius:2px;
+
+      &__success{
+        border-radius:2px;
+        height:3px;
+        background: #39B54A;
+        top:0;
+        left:0;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,77 @@
+.basket{
+
+  select {
+    appearance: none;
+    font-size:14px;
+    color: #9396A6;
+  }
+
+  textarea{
+    border: 1px solid #E1E3E8;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9396A6;
+    height:150px;
+  }
+
+  &-select{
+    &_ico{
+      right:2rem;
+      & svg{
+        width:10px;
+        height:10px;
+      }
+    }
+  }
+
+  &-section{
+    margin:40px 0 0;
+
+    @media screen and (max-width: $md-width){
+      margin:0;
+    }
+  }
+
+  &-form{
+    margin:0 0 6rem;
+
+    &_title{
+      font-family: $secondFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      color: #3A3F5C;
+    }
+
+    &_group{
+      background: #FFFFFF;
+      border: 1px solid #E1E3E8;
+      border-radius: 10px;
+      width:calc(45% - 1rem);
+      overflow: hidden;
+
+      @media screen and (max-width: $md-width){
+        width:100%;
+      }
+
+      & input{
+        font-size: 14px;
+        color: #9396A6;
+      }
+
+      &_checkbox{
+        font-size: 14px;
+        color: #000000;
+      }
+    }
+
+    & a{
+      color:#39B54A;
+
+      &:hover{
+        color:$primary-color;
+      }
+    }
+  }
+}

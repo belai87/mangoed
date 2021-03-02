@@ -1,0 +1,78 @@
+.basket{
+
+  &-delivery{
+
+    &_radio{
+      background: #EDF0F3;
+      border-radius: 50px;
+      max-width:360px;
+      width:100%;
+    }
+    
+    & input[type=radio]{
+      display: none;
+    }
+
+    input:checked + &_item{
+      background: #39B54A;
+      color: #F9FAFB;
+    }
+
+    &_item{
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: 60px;
+      color: #9396A6;
+      height:40px;
+      cursor: pointer;
+      transition:$transition;
+    }
+
+    &_point{
+      top:calc(50% - 9px);
+      right:1rem;
+      font-weight: bold;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #9396A6;
+      transition:$transition;
+      cursor: pointer;
+
+      &:hover{
+        color: $primary-color;
+
+        & svg{
+          & path{
+            fill: $primary-color;
+          }
+        }
+      }
+
+      & svg{
+        transition:$transition;
+        width:18px;
+        height:18px;
+      }
+    }
+
+    &_input{
+      font-size: 14px;
+      color: #9396A6;
+      border: 1px solid #E1E3E8;
+      border-radius: 10px;
+      max-width:200px;
+      width:100%;
+
+      @media screen and (max-width:$md-width){
+        width:calc(50% - 3rem);
+      }
+    }
+  }
+
+}
+
+

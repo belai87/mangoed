@@ -1,0 +1,25 @@
+.favorite{
+  height:46px;
+  width:46px;
+  background: #FFFFFF;
+  box-shadow: 0 7px 20px rgba(58, 63, 92, 0.1);
+  border-radius: 100%;
+  cursor: pointer;
+  transition:$transition;
+  flex: 0 0 auto;
+
+  @media screen and (max-width:$lg-width) {
+    bottom:-23px;
+    right:2rem;
+  }
+
+  &:focus,
+  &:hover{
+    animation: pulse-gray 1s infinite;
+  }
+
+
+  & svg{
+    width:20px;
+  }
+}

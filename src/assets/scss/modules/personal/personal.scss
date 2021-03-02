@@ -1,0 +1,194 @@
+.personal{
+
+  &-title{
+    font-family: $secondFont;
+    font-weight: 500;
+    font-size: 22px;
+    color: #9396A6;
+  }
+
+  &-address{
+
+    &_btn{
+      border: 2px dashed #E1E3E8;
+      box-sizing: border-box;
+      border-radius: 70px;
+      font-size: 16px;
+      width:240px;
+      height:50px;
+      color: #000000;
+      cursor: pointer;
+
+      @media screen and(max-width:$md-width){
+        width:100%;
+      }
+
+      svg{
+        width: 16px;
+        height:16px;
+
+        path{
+          fill:#9093A2;
+        }
+      }
+    }
+  }
+
+  &-info{
+    color:#fff;
+    background: #39B54A;
+    border-radius: 10px 10px 0 0;
+
+    @media screen and (max-width:$lg-width) {
+      position: relative;
+      z-index: 20;
+      border-radius: 10px;
+    }
+
+    &_item{
+      border-bottom: 1px solid rgba(255,255,255,.1);
+
+      &:first-child{
+        @media screen and (max-width:$lg-width) {
+          border-bottom: 1px solid transparent;
+
+          &.active{
+            border-bottom: 1px solid rgba(255,255,255,.1);
+          }
+        }
+      }
+
+      @media screen and (max-width:$lg-width) {
+        &:not(:first-child) {
+          height: 0;
+          opacity: 0;
+          visibility: hidden;
+
+          &.active {
+            height: auto;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        &:last-child{
+          border-bottom: 1px solid transparent;
+        }
+      }
+    }
+
+    &_sum{
+      font-size: 16px;
+    }
+    &_price{
+      font-family: $secondFont;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+
+  &-user{
+    &_img{
+
+      svg{
+        width:50px;
+        height:50px;
+      }
+    }
+
+    &_name{
+      font-family: $secondFont;
+      font-size: 18px;
+    }
+
+    &_bonus{
+      font-family: $secondFont;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 36px;
+    }
+  }
+
+  &-chart{
+    width:110px;
+    height:110px;
+
+    &-title{
+      font-size: 16px;
+    }
+
+    &-one{
+      fill:#fff
+    }
+
+    &-two{
+      fill:#33A343
+    }
+  }
+
+  &-cache{
+    color:#fff;
+
+    &_end{
+      font-size: 14px;
+    }
+
+    &_sum{
+      font-family: $secondFont;
+      font-size: 16px;
+    }
+  }
+
+  &-bonus{
+    background: $primary-color;
+    font-family: $secondFont;
+    font-weight: 500;
+    font-size: 43px;
+    border-radius: 100%;
+    width:105px;
+    height:105px;
+    flex:0 0 auto;
+  }
+
+  &-more{
+    font-family: $secondFont;
+    font-size: 14px;
+    color:#fff;
+    background: darker(#39B54A, 10);
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    transition:$transition;
+
+    &_hide{
+      font-size: 0;
+    }
+
+    &.active &{
+      &_show{
+        font-size: 0;
+      }
+      &_hide{
+        font-size: 14px;
+      }
+    }
+
+    &.active{
+      svg{
+        transform:rotateX(0);
+      }
+    }
+
+    @media screen and (max-width:$lg-width) {
+      position: relative;
+      top:-1rem;
+      z-index: 10;
+    }
+
+    svg{
+      width:16px;
+      height:10px;
+      transform:rotateX(180deg);
+    }
+  }
+
+}

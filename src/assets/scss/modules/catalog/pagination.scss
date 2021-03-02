@@ -1,0 +1,31 @@
+.pagination{
+  &-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:16px;
+    font-weight: 600;
+    width: 35px;
+    height: 35px;
+    background-color: $primary-color;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+    color: $default-color;
+
+    &.active{
+      background: #39B54A;
+      color: $default-color;
+    }
+
+    &:hover{
+      background: $danger-colors;
+      color: $default-color;
+      animation: pulse 1s;
+    }
+
+  }
+  &-item{
+    font-size:20px;
+    color: $primary-color;
+  }
+}

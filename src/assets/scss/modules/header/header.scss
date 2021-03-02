@@ -1,0 +1,152 @@
+.header{
+  display: block;
+  position: relative;
+  background-color: $primary-color-header;
+  z-index:10;
+
+  & .logo{
+    & svg{
+      height:50px;
+
+      @media screen and (max-width: $md-width){
+        height:30px;
+      }
+    }
+  }
+
+  &-delivery{
+    font-size:16px;
+    color: $default-color;
+    font-weight: bold;
+
+    & span{
+      font-weight: 400;
+    }
+  }
+
+  &-search{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+
+    & input {
+      background: transparent;
+      height:45px;
+      color: $default-color;
+      font-size: 15px;
+      font-weight: normal;
+
+      &::placeholder {
+        color: $default-color;
+      }
+    }
+  }
+
+  &-user {
+    cursor: pointer;
+    & svg{
+      width: 24px;
+      height:24px;
+      fill:none;
+    }
+  }
+
+  &-tel{
+    font-size: 16px;
+    font-weight: bold;
+    color:$default-color;
+    transition:$transition;
+
+    @media screen and (max-width:1400px){
+      font-size:14px;
+    }
+
+    &:hover{
+      color: $dark-color;
+    }
+  }
+
+  &-callback{
+    font-size: 15px;
+    color:$default-color;
+    font-weight: 400;
+    transition:$transition;
+    cursor: pointer;
+
+    &:hover{
+      color: $dark-color;
+    }
+  }
+
+  &-basket{
+    border-radius:100%;
+    width:46px;
+    height:46px;
+    background: $danger-colors;
+    margin: 0 auto;
+    cursor:pointer;
+    transition: $transition;
+
+    &:hover{
+      animation: pulse 2s 1;
+    }
+
+    & svg{
+      width:20px;
+      height:20px;
+    }
+
+    &_cnt{
+      width:24px;
+      height:24px;
+      top:-6px;
+      right:-6px;
+      background: $default-color;
+      color:$danger-colors;
+      font-size:14px;
+      font-weight: 400;
+      border-radius:100%;
+    }
+  }
+
+  &-menu{
+    cursor:pointer;
+
+    &.active &{
+      &_open{
+        display: none;
+        @media screen and (max-width:$xl-width){
+          display: flex;
+        }
+      }
+      &_cancel{
+        width:18px;
+        height:18px;
+        display:block;
+        
+        @media screen and (max-width:$xl-width){
+          display: none;
+        }
+      }
+    }
+
+    &_open{
+      width:24px;
+      height:24px;
+    }
+
+    &_cancel{
+      display: none;
+    }
+  }
+
+  &-mobile{
+
+    &-menu,
+    &-search{
+      & svg{
+        width:24px;
+        height:24px;
+      }
+    }
+  }
+}

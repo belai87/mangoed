@@ -1,0 +1,35 @@
+.datepicker--content{
+  padding:1rem;
+}
+.datepicker--nav-title,
+.datepicker--day-name{
+  font-weight: bold;
+  font-family: $secondFont;
+  font-size: 1em;
+}
+.datepicker--cell{
+  &.datepicker--cell-day{
+    &.-disabled-{
+      &.-focus-{
+        background:transparent;
+        color:#aeaeae;
+      }
+    }
+    &.-current-{
+      &.-disabled-{
+        /*background:$primary-color;*/
+        background:$border-color;
+        border-radius:100%;
+        color:#fff;
+      }
+    }
+  }
+}
+
+.datepicker--cell.-selected-,
+.datepicker--cell.datepicker--cell-day.-focus-,
+.datepicker--cell.datepicker--cell-day.-weekend-.-selected-{
+  background:$primary-color;
+  border-radius:100%;
+  color:#fff;
+}

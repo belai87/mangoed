@@ -1,0 +1,72 @@
+.personal{
+
+  &-menu{
+    top:40px;
+    right:15px;
+    background: $dark-color;
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transition:$transition;
+    z-index:2100;
+    border-radius:5px;
+    position: absolute;
+
+    @media screen and (max-width:$xl-width){
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: $light-color;
+      border-radius:0;
+    }
+
+    &:after{
+      position: absolute;
+      content: "";
+      top: -6px;
+      right: 30px;
+      width: 12px;
+      height: 12px;
+      background: $dark-color;
+      transform: rotate(45deg);
+
+      @media screen and (max-width:$xl-width){
+        display: none;
+      }
+    }
+
+    &.active{
+      opacity: 1;
+      height: auto;
+      visibility: visible;
+      @media screen and (max-width:$xl-width){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+    }
+
+    &-wrapper{
+      @media screen and (max-width:$xl-width){
+        width:100%;
+      }
+    }
+
+    &_link{
+      font-size:18px;
+      font-weight: 600;
+      color:$light-color;
+
+      @media screen and (max-width:$xl-width){
+        color:$dark-color;
+        font-weight: 400;
+      }
+
+      &:hover{
+        color:$primary-color;
+      }
+    }
+  }
+}

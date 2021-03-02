@@ -1,0 +1,62 @@
+#detail-modal{}
+.detail-modal{
+  top:0;
+  left:0;
+  background: rgba(0,0,0,.5);
+  z-index:1090;
+  height:0;
+  opacity: 0;
+  visibility: hidden;
+  transition:$transition;
+
+  &.active{
+    height:unset;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-block{
+    border-radius:10px;
+    overflow: hidden;
+    padding:3rem;
+
+    @media screen and (max-width:$md-width) {
+      padding:3rem 0;
+      border-radius:0;
+    }
+  }
+
+  &-wrapper{
+    padding:3rem;
+    max-width: 80vw;
+    max-height:90vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #fff;
+    margin:-3rem;
+
+    @media screen and (max-width:$md-width) {
+      margin:0;
+      padding:3rem 0;
+      max-width: 100vw;
+      max-height:100vh;
+    }
+
+    &__white{
+      @media screen and (max-width:$lg-width) {
+        padding:0 1rem;
+      }
+    }
+
+    &__gray{
+      background-color: #F9FAFB;
+      margin: 0 -3rem;
+      padding: 1rem 3rem 0 3rem;
+
+      @media screen and (max-width:$lg-width) {
+        margin: 0 -2rem;
+        padding: 1rem 3rem 0 3rem;
+      }
+    }
+  }
+}

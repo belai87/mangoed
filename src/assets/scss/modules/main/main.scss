@@ -1,0 +1,24 @@
+.main{
+  transition:$transition;
+
+  &.down{
+    margin:5rem 0 0;
+  }
+
+  &-background{
+    top:88px;
+    left:0;
+    height:150px;
+    width:100%;
+    background: $primary-color-header;
+    background: linear-gradient(180deg, $primary-color-header 0%, #FFA965 100%);
+
+    @media screen and (max-width:$lg-width){
+      top:75px;
+    }
+  }
+
+  &-detail{
+    background: $default-color;
+  }
+}

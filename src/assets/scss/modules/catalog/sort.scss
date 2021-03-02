@@ -1,0 +1,57 @@
+.catalog{
+  &-sort{
+    font-weight: normal;
+    font-size: 14px;
+    color:#3A3F5C;
+
+    &_title{
+
+      line-height: 17px;
+      color: #3a3f5cd9;
+    }
+
+    &_price{
+      cursor: pointer;
+
+      & svg{
+        width:16px;
+        height:16px;
+      }
+    }
+
+    & label{
+      cursor: pointer;
+    }
+
+    & input[type=checkbox]{
+      display: none;
+    }
+
+    & input[type=checkbox]:checked + &_checkbox{
+      background: #39B54A;
+    }
+
+    & input[type=checkbox]:checked + &_checkbox{
+      & svg{
+        stroke:#fff;
+      }
+    }
+
+    &_checkbox{
+      width:18px;
+      height:18px;
+      border-radius:4px;
+      background: #E8ECEF;
+
+      & svg{
+        width:10px;
+        height:10px;
+
+        & path{
+          stroke:#E8ECEF;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,102 @@
+.step{
+  border-radius: 10px;
+  border: 1px solid #E1E3E8;
+  overflow: hidden;
+
+  @media screen and (max-width:$md-width) {
+    border: none;
+  }
+
+  &-item{
+    height:60px;
+    background: #EDF0F3;
+    position: relative;
+
+    @media screen and (max-width:$md-width) {
+      background: transparent;
+    }
+
+
+    &:after{
+      position: absolute;
+      content: "";
+      top: 6px;
+      right: -24px;
+      border-left: 24px solid transparent;
+      border-right: 24px solid transparent;
+      border-top: 24px solid transparent;
+      border-bottom: 24px solid transparent;
+      border-radius: 10px;
+      transform: rotate(135deg);
+      box-shadow: -1px -1px 0px 0px #E1E3E8;
+      z-index: 1;
+      background: #edf0f3;
+
+      @media screen and (max-width:$md-width) {
+        display: none;
+      }
+    }
+
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+
+    &.active{
+      position: relative;
+      background: $default-color;
+      /*box-shadow: 0 7px 20px rgba(58, 63, 92, 0.1);*/
+
+      @media screen and (max-width:$md-width) {
+        background: transparent;
+      }
+
+      &:after{
+        position: absolute;
+        content: "";
+        top: 6px;
+        right: -24px;
+        border-left: 24px solid white;
+        border-right: 24px solid transparent;
+        border-top: 24px solid white;
+        border-bottom: 24px solid transparent;
+        border-radius: 10px;
+        transform: rotate(135deg);
+        z-index: 1;
+        background: #fff;
+
+        @media screen and (max-width:$md-width) {
+          display: none;
+        }
+      }
+    }
+
+    &_cnt{
+      width:30px;
+      height:30px;
+      border-radius:100%;
+      background: #E1E3E8;
+      color:$default-color;
+      font-weight: bold;
+      font-size: 16px;
+      flex:0 0 auto;
+    }
+
+    &_title{
+      font-size: 16px;
+      color: #9396A6;
+    }
+
+    &.active &{
+      &_cnt{
+        background: #39B54A;
+      }
+
+      &_title{
+        color: #3A3F5C;
+      }
+    }
+  }
+
+}

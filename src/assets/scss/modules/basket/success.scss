@@ -1,0 +1,38 @@
+.basket{
+
+  &-success{
+
+    svg{
+      width:130px;
+      height:130px;
+    }
+
+    &_title{
+      font-family: $secondFont;
+      font-size: 38px;
+      line-height: 36px;
+      color: #3A3F5C;
+    }
+
+    &_text{
+      font-size: 16px;
+      line-height: 130%;
+      color: #9396A6;
+    }
+
+    &_btn{
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #9396A6;
+      border-radius:60px;
+      border:1px solid #9396A6;
+      transition:$transition;
+
+      &:hover{
+        background: #9396A6;
+        color:#fff;
+      }
+    }
+  }
+}
